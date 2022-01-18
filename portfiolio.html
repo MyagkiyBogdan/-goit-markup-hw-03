@@ -11,34 +11,39 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+		<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container nav-container">
         <nav class="header__navigation">
-          <a href="./index.html" class="logo"><span class="logo__word">Web</span>Studio</a>
-          <ul class="list header__list">
+          <a href="./index.html" class="logo header-logo"><span class="logo__word">Web</span>Studio</a>
+          <ul class="header__list menu-list">
             <li class="header__item">
               <a href="./index.html" class="header__link">Студия </a>
             </li>
             <li class="header__item">
-              <a href="./portfiolio.html" class="header__link header__link--current link"
-                >Портфолио
-              </a>
+              <a href="./portfiolio.html" class="header__link header__link--current">Портфолио </a>
             </li>
             <li class="header__item">
               <a href="" class="header__link link">Контакты </a>
             </li>
           </ul>
         </nav>
-        <ul class="header__list contact-list list">
-          <li class="contact-list__item">
+        <ul class="header__list contact-list">
+          <li class="contact-list__item header__item">
             <a href="mailto:info@devstudio.com" class="header__link contact-list__link link"
               >info@devstudio.com</a
             >
           </li>
-          <li class="contact-list__item">
+          <li class="contact-list__item header__item">
             <a href="tel:+380961111111" class="header__link contact-list__link link"
               >+38 096 111 11 11</a
             >
@@ -49,7 +54,7 @@
     <main class>
       <section class="works section">
         <div class="container">
-          <!-- Не забыть скрыть заголовок-->
+          <!-- Cкрытый заголовок-->
           <h1 class="works-title visually-hidden">Наши работы</h1>
           <ul class="works__list works-filter">
             <li class="works__item"><button type="button" class="works__btn">Все</button></li>
@@ -202,13 +207,13 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <a href="./index.html" class="logo logo--white"
+        <a href="./index.html" class="footer-logo logo"
           ><span class="logo__word">Web</span>Studio</a
         >
         <address>
           <ul class="footer__list">
             <li class="footer__item">
-              <a href="" class="footer__link footer__linl--map"
+              <a href="" class="footer__link footer__link--map"
                 >г. Киев, пр-т Леси Украинки, 26
               </a>
             </li>
