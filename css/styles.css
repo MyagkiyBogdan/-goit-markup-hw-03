@@ -15,6 +15,7 @@
   --main-section-padding: 94px;
   --main-margin-bottom: 50px;
   --title-margin-main: 10px;
+	--main-margin-right: 30px;
 }
 
 /* Global settings */
@@ -232,15 +233,14 @@ ul {
 
 .benefits__list {
 	display: flex;
-	justify-content: space-between;
 }
 
 .benefits__item {
-	flex-basis: 270px;
+	flex-basis: calc((100% - 90px) / 4);
 }
 
 .benefits__item:not(:last-child) {
-	margin-right: 30px;
+	margin-right: var(--main-margin-right);
 }
 
 .benefits__title {
@@ -261,12 +261,32 @@ ul {
   background-color: var(--main-background-color);
 }
 
+.about__list {
+	display: flex;
+}
+
+.about__item:not(:last-child) {
+	margin-right: var(--main-margin-right);
+}
+
 /* Team section */
 
 .team {
   background-color: var(--second-background-color);
   font-size: var(--second-font-size);
   line-height: 1.19;
+}
+
+.team__list {
+	display: flex;
+}
+
+.team__item {
+	flex-basis: calc((100% - calc(3 * var(--main-margin-right))) / 4);
+}
+
+.team__item:not(:last-child) {
+	margin-right: var(--main-margin-right);
 }
 
 .team__title {
@@ -283,7 +303,12 @@ ul {
 .team__item-box {
   padding-top: 30px;
   padding-bottom: 30px;
+	border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
   text-align: center;
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Porfolio page */
@@ -322,6 +347,21 @@ ul {
   color: var(--white-text-color);
 }
 
+.works-examples {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: calc(-1 * var(--main-margin-right));
+	margin-bottom: calc(-1 * var(--main-margin-right));
+
+}
+
+.works-examples__item {
+	flex-basis: calc((100% - calc(3 * var(--main-margin-right))) / 3);
+	margin-right: var(--main-margin-right);
+	margin-bottom: var(--main-margin-right);
+}
+
+
 .works-examples__title {
   margin-bottom: 4px;
   font-weight: var(--font-weight-first);
@@ -343,4 +383,6 @@ ul {
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   text-align: center;
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
