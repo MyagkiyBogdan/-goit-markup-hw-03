@@ -25,6 +25,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   line-height: 1.71;
+	background-color: var(--main-background-color);
 }
 
 h1,
@@ -100,20 +101,21 @@ ul {
 /* Header and footer settings */
 
 .header {
-  background-color: var(--main-background-color);
   border-bottom: 1px solid #ececec;
 }
 
-.header__list {
-  display: flex;
+
+.header-menu-list {
+	display: flex;
 }
 
-.header__item:not(:last-child) {
+.header-menu-list__mix {
+	margin-left: 93px;
+}
+
+.header-menu__item:not(:last-child),
+.header-contact-list__item:not(:last-child) {
   margin-right: 50px;
-}
-
-.menu-list {
-  margin-left: 93px;
 }
 
 .logo {
@@ -148,9 +150,14 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.contact-list {
-  margin-left: auto;
+.header-contact-list {
+	display: flex;
 }
+
+.header-contact-list__mix {
+	margin-left: auto;
+}
+
 .contact-list__link {
   color: var(--second-text-color);
 }
@@ -170,18 +177,20 @@ ul {
 
 .footer__link--map {
 	display: block;
-	padding-bottom: 9px;
-  color: var(--white-text-color);
+	color: var(--white-text-color);
 }
 
 .footer__link--adress {
 	display: block;
-	padding-bottom: 9px;
-  color: var(--footer-text-color);
+	color: var(--footer-text-color);
 }
 
 .footer__list {
   font-style: normal;
+}
+
+.footer__item + .footer__item {
+	margin-top: 9px;
 }
 
 /* Main page */
@@ -227,9 +236,6 @@ ul {
 
 /* Benefits section */
 
-.benefits {
-  background-color: var(--main-background-color);
-}
 
 .benefits__list {
 	display: flex;
@@ -258,7 +264,7 @@ ul {
 /* About us section */
 
 .about {
-  background-color: var(--main-background-color);
+  padding-top: 0;
 }
 
 .about__list {
@@ -282,7 +288,11 @@ ul {
 }
 
 .team__item {
-	flex-basis: calc((100% - calc(3 * var(--main-margin-right))) / 4);
+	flex-basis: calc((100% - 3 * var(--main-margin-right)) / 4);
+	background-color: #ffffff;
+
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team__item:not(:last-child) {
@@ -303,19 +313,11 @@ ul {
 .team__item-box {
   padding-top: 30px;
   padding-bottom: 30px;
-	border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
   text-align: center;
-	border-radius: 0px 0px 4px 4px;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Porfolio page */
 
-.works {
-  background-color: var(--main-background-color);
-}
 
 .works-filter {
 	display: flex;
@@ -356,9 +358,12 @@ ul {
 }
 
 .works-examples__item {
-	flex-basis: calc((100% - calc(3 * var(--main-margin-right))) / 3);
+	flex-basis: calc((100% - 3 * var(--main-margin-right)) / 3);
+	background-color: #ffffff;
 	margin-right: var(--main-margin-right);
 	margin-bottom: var(--main-margin-right);
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -379,10 +384,6 @@ ul {
 .work-examples-box {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  text-align: center;
-	border-radius: 0px 0px 4px 4px;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	padding-left: 24px;
+	padding-right: 24px;
 }
